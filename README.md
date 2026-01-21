@@ -1,13 +1,6 @@
 # Intro-to-GitHub-Assignment
 CHEP ML898 Data Wrangling Assignment 
 
----
-title: "data_wrangling_assignment"
-author: "Sohana Sadique"
-date: "`r Sys.Date()`"
-output: html_document
----
-
 
 # Loading necessary libraries
 
