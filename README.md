@@ -280,11 +280,13 @@ CreateTableOne(data = final_data,
 
 
 ```
-Table 1 represents the mean and standard deviation of vegetable and fruit consumption in a day, total fruit and vegetable consumption in a day, and total physical activity in a week. 
 
-On average, participants consumed `r round(mean(final_data$NUT_VEG_QTY, na.rm = TRUE), 2)` vegetables with variability `r round(sd(final_data$NUT_VEG_QTY, na.rm = TRUE), 2)` (SD), `r round(mean(final_data$NUT_FRUITS_QTY, na.rm = TRUE), 2)` fruits with variability `r round(sd(final_data$NUT_FRUITS_QTY, na.rm = TRUE), 2)` (SD), and the average physical activity was `r round(mean(final_data$PA_TOTAL_SHORT, na.rm = TRUE), 2)` with variability `r round(sd(final_data$PA_TOTAL_SHORT, na.rm = TRUE), 2)` (SD).
+Interpretation:
 
-After addressing outliers, the average vegetable consumption is `r round(mean(final_data$new_veg, na.rm = TRUE), 2)` with variability `r round(sd(final_data$new_veg, na.rm = TRUE), 2)` (SD), average fruit consumption is `r round(mean(final_data$new_fruit, na.rm = TRUE), 2)` with variability `r round(sd(final_data$new_fruit, na.rm = TRUE), 2)` (SD), and average physical activity is `r round(mean(final_data$new_pa, na.rm = TRUE), 2)` with variability `r round(sd(final_data$new_pa, na.rm = TRUE), 2)` (SD).
+Table 1 represents the mean and standard deviation of vegetable and fruit consumption in a day, total fruit and vegetable consumption in a day, and total physical activity in a week.
+On average, participants consumed 2.67 vegetables with variability 1.68 (SD), 2.13 fruits with variability 1.41 (SD), and the average physical activity was 2574.09 with variability 2656.19 (SD).
+After addressing outliers, the average vegetable consumption is 2.71 with variability 0.84 (SD), average fruit consumption is 2.09 with variability 1.27 (SD), and average physical activity is 966.24 with variability 483.51 (SD).
+
 
 ### Median, mode and variance
 
@@ -319,18 +321,14 @@ var(final_data$new_fruit, na.rm = TRUE)
 
 ```
 
-Interpretation: The median vegetable consumption is `r median(final_data$NUT_VEG_QTY, na.rm = TRUE)`, median fruit consumption is `r median(final_data$NUT_FRUITS_QTY, na.rm = TRUE)`, and median physical activity is `r median(final_data$PA_TOTAL_SHORT, na.rm = TRUE)`. 
+Interpretation: 
 
-The mode of vegetable consumption is `r as.numeric(names(sort(table(final_data$NUT_VEG_QTY), decreasing=TRUE)[1]))` and, the mode of fruit consumption is `r as.numeric(names(sort(table(final_data$NUT_FRUITS_QTY), decreasing=TRUE)[1]))`. 
-I intentionally avoided mode of Physical activity as the result was 0, which is not meaningful in this context.
-
-The variance of vegetable consumption is `r round(var(final_data$NUT_VEG_QTY, na.rm = TRUE), 2)`and, the variance of fruit consumption is `r round(var(final_data$NUT_FRUITS_QTY, na.rm = TRUE), 2)`.
-
-After addressing outliers, the median vegetable consumption is `r median(final_data$new_veg, na.rm = TRUE)`, median fruit consumption is `r median(final_data$new_fruit, na.rm = TRUE)`, and median physical activity is `r median(final_data$new_pa, na.rm = TRUE)`.
-
-The mode of vegetable consumption is `r as.numeric(names(sort(table(final_data$new_veg), decreasing=TRUE)[1]))` and, the mode of fruit consumption is `r as.numeric(names(sort(table(final_data$new_fruit), decreasing=TRUE)[1]))`.
-
-The variance of vegetable consumption is `r round(var(final_data$new_veg, na.rm = TRUE), 2)`and, the variance of fruit consumption is `r round(var(final_data$new_fruit, na.rm = TRUE), 2)`.
+The median vegetable consumption is 2, median fruit consumption is 2, and median physical activity is 1782.
+The mode of vegetable consumption is 2 and, the mode of fruit consumption is 2. I intentionally avoided mode of Physical activity as the result was 0, which is not meaningful in this context.
+The variance of vegetable consumption is 2.81and, the variance of fruit consumption is 2.
+After addressing outliers, the median vegetable consumption is 2, median fruit consumption is 2, and median physical activity is 1300.
+The mode of vegetable consumption is 2 and, the mode of fruit consumption is 2.
+The variance of vegetable consumption is 0.7and, the variance of fruit consumption is 1.62.
 
 
 ### Calculating the percents and frequencies * For the variables were it is appropriate to do so
